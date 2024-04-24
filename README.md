@@ -39,3 +39,31 @@ Run the following command for prefix BERT finetune on the classification dataset
 ```bash
 bash script/run_prefix.sh
 ```
+
+## File Structure
+
+This repository is organized as follows:
+
+
+    ├── csv/                        # Contains CSV files for the dataset 
+    │   ├── test_simple.csv         # Test dataset
+    │   ├── train_simple.csv        # Train dataset
+    │   ├── val_simple.csv          # Validation dataset
+    │   └── USvideo.csv             # Original dataset where the test, train, val datasets generated
+    ├── model/                      # Model scripts and related files
+    │   ├── utils.py                # Model utils functions
+    │   ├── prefix_encoder.py       # Prefix encoder layer
+    │   ├── sequence_classification.py   # Bert classification model
+    ├── script/                     # Scripts for running the model
+    │   ├── run_og.sh               # Scripts for running the finetuning
+    │   ├── run_prefix.sh           # Scripts for running the prefix finetuning
+    ├── arguments.py                # Hyperparameters parser
+    ├── dataset.py                  # Handles data loading and preprocessing
+    ├── main.py                     # Main script to run the models
+    ├── preprocessing.ipynb         # Jupyter notebook for data preprocessing, script to generate the test, train, val datasets
+    ├── requirements.txt            # Required libraries and dependencies to run the project
+    ├── README.md                   # Top-level README with project overview
+    └── trainer.py                  # Training functions for the model
+
+
+
